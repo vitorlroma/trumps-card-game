@@ -4,12 +4,16 @@ class Player:
         self.matches_played = 0
         self.matches_won = 0
         self.succes_rate = 0.0
-    
-    @staticmethod
-    def show_player(p):
-        print(f'Nick: {p.nickname};\nMatches played: {p.matches_played};'
-              f'\nMatches won: {p.matches_won};\nSucces rate: {p.succes_rate}')
-    
+     
+    def __str__(self):
+        '''
+        Como usar:
+        obj = Player("nickname")
+        print(obj)
+        '''
+        return f'Nick: {self.nickname};\nMatches played: {self.matches_played};'
+              f'\nMatches won: {self.matches_won};\nSucces rate: {self.succes_rate}'
+   
     @staticmethod
     def register_player(players_list, nick):
         p = Player(nick)
