@@ -60,7 +60,7 @@ class Player:
     
         return aux_list
 
-    def jogadores_bin(jogadores):
+    def players_bin(jogadores):
         file = 'Players.dat'
         try:
             with open(file, 'ab') as f:
