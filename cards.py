@@ -10,6 +10,10 @@ class Card:
         self.energy = 0.0
         self.jokenpo = ''
     
+    def __str__(self):
+        return f'Character: {self.character};\nValue: {self.value};'
+        + f'\nStrength: {self.strength};\nJokenpo: {self.jokenpo}'
+    
     @staticmethod
     def show_card(card):
         print(f'Character: {card.character};\nValue: {card.value};'
