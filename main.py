@@ -2,8 +2,6 @@ from Players import Player as pl
 from Cards import Card as ca
 import game as gm
 
-def try_file():
-
 
 def winner(p1, p2, num):
     if num == 1:
@@ -16,7 +14,8 @@ def winner(p1, p2, num):
         p2.update_player(p2, True)
     elif num == 0:
         print('The game ended in a draw')
-    
+
+
 def play(deck, p1, p2, mode):
     index = 0
     score = [0, 0]
@@ -61,18 +60,18 @@ def menu(players, deck):
     elif answer == 3:
         pass
     else:
-        print('Resposta inválida.\n')
+        print('Undefined answer.\n')
 
     return answer
 
 def main():
     answer = 0
-    if 
     players_list = []
     deck = []
-    
+ 
+    pl.read_players(players_list)
     ca.read_cards(deck)
-    
+
     while answer != 3:
         menu(players_list, deck)
     

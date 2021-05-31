@@ -10,7 +10,7 @@ class Card:
         self.energy = 0.0
         self.jokenpo = ''
     
-    @staticmethod
+    @str
     def show_card(card):
         print(f'Character: {card.character};\nValue: {card.value};'
             f'\nStrength: {card.strength};\nJokenpo: {card.jokenpo}')
@@ -71,10 +71,12 @@ class Card:
             Card.give_card(deck, p2c)
     
     def read_cards(deck):
-        file = 'Cartas.txt'
-        
-        with open(file, 'r') as c:
-            lista = c.read()[1:].splitlines()
-        
-        Card.setting_deck(lista, deck)
+        file = 'Cards.txt'
+        try:
+            with open(file, 'r') as c:
+                aux_list = c.read()[1:].splitlines()
+            
+            Card.setting_deck(aux_list, deck)
+        except IOError:
+            print('File could not be read.')
         

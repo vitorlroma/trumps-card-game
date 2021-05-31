@@ -1,3 +1,6 @@
+import pickle as pk
+
+
 class Player:
     def __init__(self, nickname):
         self.nickname = nickname
@@ -14,7 +17,7 @@ class Player:
     def register_player(players_list, nick):
         p = Player(nick)
         players_list.append(p)
-        print(f'Jogador {p.nickname} cadastrado.\n')
+        print(f'Player {p.nickname} registered.\n')
     
     @staticmethod
     def update_player(player, bool):
@@ -39,21 +42,28 @@ class Player:
         if player:
             Player.show_player(player)
             return player
-        print('Jogador não cadastrado.\n')
-        Player.register_player(players_list, nick)
+        print('Unregistered player.\n')
+        answer = input('Wish to register? Yes or No')
+        if answer == "yes" or answer == "Yes":
+            Player.register_player(players_list, nick)
+        elif answer == "no" or answer == "No":
+            Player.verify_player(players_list)
         return Player.search_player(players_list, nick)
 
-  # def read_players():
-#       file = 'jogadores.dat'
-    #   try:
-    #       with open(file, 'rb') as f:
-    #           lista = pk.load(arquivo)
-    #   except IOError:
-    #       print('Arquivo não pode ser acessado.')
+    def read_players(players):
+        file = 'Players.dat'
+        try:
+            with open(file, 'rb') as f:
+                aux_list = pk.load(f)
+        except IOError:
+          print('File could not be read.')
     
-    #     return lista
+        return aux_list
 
-    # def jogadores_bin(jogadores):
-    #     file = 'jogadores.dat'
-    #     with open(file, 'ab') as f:
-    #         pk.dump(jogadores, f)
+    def jogadores_bin(jogadores):
+        file = 'Players.dat'
+        try:
+            with open(file, 'ab') as f:
+                pk.dump(jogadores, f)
+        except IOError:
+            print('File could not be read.')
