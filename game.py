@@ -18,7 +18,7 @@ def choose_card(player_hand, mode):
     if mode == 1:
         num = int(input('Type the number of the card you choose: '))
         return player_hand[(num - 1)]
-    if mode == 2:
+    elif mode == 2:
         num = rd.randint(1, len(player_hand))
         return player_hand[(num - 1)]
 
@@ -26,11 +26,11 @@ def choose_card(player_hand, mode):
 def duel(dispute, card1, card2):
     if dispute == 1:
         return comparison(card1.value, card2.value)
-    if dispute == 2:
+    elif dispute == 2:
         return comparison(card1.strength, card2.strength)
-    if dispute == 3:
+    elif dispute == 3:
         return comparison(card1.energy, card2.energy)
-    if dispute == 4:
+    elif dispute == 4:
         return jokenpo(card1.jokenpo, card2.jokenpo)
     
 def update_score(score, round_winner):
@@ -43,22 +43,22 @@ def update_score(score, round_winner):
 def comparison(value1, value2):
     if value1 < value2:
         return 2
-    if value1 > value2:
+    elif value1 > value2:
         return 1
-    if value1 == value2:
+    elif value1 == value2:
         return 0
 
 
 def jokenpo(value1, value2):
-    if  (value1 == 'Papel' and value2 == 'Tesoura'
-        or value1 == 'Pedra' and value2 == 'Papel'
-        or value1 == 'Tesoura' and value2 == 'Pedra'):
+    if  (value1 == 'Paper' and value2 == 'Scissors'
+        or value1 == 'Rock' and value2 == 'Paper'
+        or value1 == 'Scissors' and value2 == 'Rock'):
         return 2
-    if  (value1 == 'Pedra' and value2 == 'Tesoura'
-        or value1 == 'Tesoura' and value2 == 'Papel'
-        or value1 == 'Papel' and value2 == 'Pedra'):
+    elif  (value1 == 'Rock' and value2 == 'Scissors'
+        or value1 == 'Scissors' and value2 == 'Paper'
+        or value1 == 'Paper' and value2 == 'Rock'):
         return 1
-    if value1 == value2:
+    elif value1 == value2:
         return 0
 
 
@@ -67,11 +67,11 @@ def tie_breaker(p1c, p2c, attribute):
     sum2 = sum_of_cards(p2c, attribute)
     if sum1 < sum2:
         return 1
-    if sum2 < sum1:
+    elif sum2 < sum1:
         return 2
-    if sum1 == sum2:
+    elif sum1 == sum2:
         return tie_breaker(p1c, p2c, attribute + 1)
-    if attribute == 4:
+    elif attribute == 4:
         return 0
 
 

@@ -8,7 +8,7 @@ class Player:
         self.matches_won = 0
         self.succes_rate = 0.0
     
-    @staticmethod
+    @str
     def show_player(p):
         print(f'Nick: {p.nickname};\nMatches played: {p.matches_played};'
               f'\nMatches won: {p.matches_won};\nSucces rate: {p.succes_rate}')
@@ -37,33 +37,34 @@ class Player:
 
     @staticmethod
     def verify_player(players_list):
-        nick = input('Login.\nType nickname: ')
-        player = Player.search_player(players_list, nick)
-        if player:
-            Player.show_player(player)
-            return player
-        print('Unregistered player.\n')
-        answer = input('Wish to register? Yes or No')
-        if answer == "yes" or answer == "Yes":
-            Player.register_player(players_list, nick)
-        elif answer == "no" or answer == "No":
-            Player.verify_player(players_list)
+        while True:
+            nick = input('Login.\nType nickname: ')
+            player = Player.search_player(players_list, nick)
+            if player:
+                Player.show_player(player)
+                break
+            print('Unregistered player.\n')
+            answer = input('Wish to register? Yes or No')
+            if answer == "yes" or answer == "Yes":
+                Player.register_player(players_list, nick)
+                break
+
         return Player.search_player(players_list, nick)
 
+    @staticmethod
     def read_players(players):
         file = 'Players.dat'
         try:
             with open(file, 'rb') as f:
-                aux_list = pk.load(f)
+                players = pk.load(f)
         except IOError:
-          print('File could not be read.')
-    
-        return aux_list
+            print('File could not be read.')
 
-    def players_bin(jogadores):
+    @staticmethod
+    def players_bin(players):
         file = 'Players.dat'
         try:
-            with open(file, 'ab') as f:
-                pk.dump(jogadores, f)
+            with open(file, 'wb') as f:
+                pk.dump(players, f)
         except IOError:
             print('File could not be read.')

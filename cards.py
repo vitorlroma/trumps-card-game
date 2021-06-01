@@ -37,19 +37,19 @@ class Card:
             aux = deck.pop()
             if i % 2 == 0:
                 player1.cartas.append(aux)
-            if i % 2 == 1:
+            elif i % 2 == 1:
                 player2.cartas.append(aux)
 
     @staticmethod
     def rearrange_cards(player_hand, mode, key):
         if mode == 1:
-            player_hand.sort(key=(operator.attrgetter('personagem')))
+            player_hand.sort(key=(operator.attrgetter('character')))
         elif key == 1:
-            player_hand.sort(key=(operator.attrgetter('valor')))
+            player_hand.sort(key=(operator.attrgetter('value')))
         elif key == 2:
-            player_hand.sort(key=(operator.attrgetter('forca')))
+            player_hand.sort(key=(operator.attrgetter('strength')))
         elif key == 3:
-            player_hand.sort(key=(operator.attrgetter('energia')))
+            player_hand.sort(key=(operator.attrgetter('energy')))
         elif key == 4:
             Card.shuffle_cards(player_hand)
 
@@ -70,6 +70,7 @@ class Card:
             Card.give_card(deck, p1c)
             Card.give_card(deck, p2c)
     
+    @staticmethod
     def read_cards(deck):
         file = 'Cards.txt'
         try:

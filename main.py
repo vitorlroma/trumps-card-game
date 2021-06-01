@@ -40,7 +40,7 @@ def play(deck, p1, p2, mode):
         if not p1_cards:
             winner(p1, p2, 1)
             return
-        if not p2_cards:
+        elif not p2_cards:
             winner(p1, p2, 2)
             return
 
