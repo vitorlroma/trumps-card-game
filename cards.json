@@ -1,0 +1,1563 @@
+[
+  {
+    "Character": "AKIHIRO",
+    "Value": 6718,
+    "Strength": 34.97,
+    "Energy": 85.51,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "AIKO",
+    "Value": 9109,
+    "Strength": 17.55,
+    "Energy": 56.08,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "AKANE",
+    "Value": 8036,
+    "Strength": 77.15,
+    "Energy": 72.35,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "AKEMI",
+    "Value": 8171,
+    "Strength": 51.79,
+    "Energy": 52.78,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "AKIHIRO",
+    "Value": 5074,
+    "Strength": 72.96,
+    "Energy": 84.64,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "AKIKO",
+    "Value": 6522,
+    "Strength": 78.64,
+    "Energy": 76.35,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "AMATERASU",
+    "Value": 8675,
+    "Strength": 14.33,
+    "Energy": 0.4,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "ARATA",
+    "Value": 4919,
+    "Strength": 51.76,
+    "Energy": 19.12,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "ASAMI",
+    "Value": 1928,
+    "Strength": 74.32,
+    "Energy": 24,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "ASUKA",
+    "Value": 7351,
+    "Strength": 7.58,
+    "Energy": 30.01,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "ATSUKO",
+    "Value": 7441,
+    "Strength": 8.59,
+    "Energy": 70.6,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "ATSUSHI",
+    "Value": 3396,
+    "Strength": 16.71,
+    "Energy": 61.2,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "AYAKA",
+    "Value": 5281,
+    "Strength": 22.34,
+    "Energy": 69.2,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "CHIEKO",
+    "Value": 4743,
+    "Strength": 72.22,
+    "Energy": 69.28,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "CHOUKO",
+    "Value": 4660,
+    "Strength": 22.88,
+    "Energy": 82.4,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "DAICHI",
+    "Value": 7374,
+    "Strength": 85.03,
+    "Energy": 78.26,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "DAIKI",
+    "Value": 6351,
+    "Strength": 88.61,
+    "Energy": 35.58,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "DAISUKE",
+    "Value": 3555,
+    "Strength": 57.36,
+    "Energy": 52.71,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "EIKO",
+    "Value": 2194,
+    "Strength": 28.29,
+    "Energy": 84.87,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "FUMIKO",
+    "Value": 7539,
+    "Strength": 41.07,
+    "Energy": 72.64,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "GORO",
+    "Value": 9253,
+    "Strength": 97.4,
+    "Energy": 92.27,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "HACHIRO",
+    "Value": 8386,
+    "Strength": 19.91,
+    "Energy": 28.52,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "HAJIME",
+    "Value": 6860,
+    "Strength": 89.34,
+    "Energy": 53.39,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "HANA",
+    "Value": 8551,
+    "Strength": 92.32,
+    "Energy": 82.24,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "HARUKI",
+    "Value": 4654,
+    "Strength": 12.16,
+    "Energy": 69.75,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "HARUMI",
+    "Value": 9050,
+    "Strength": 44.36,
+    "Energy": 40.92,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "HARUNA",
+    "Value": 5914,
+    "Strength": 9.23,
+    "Energy": 26.03,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "HARUO",
+    "Value": 5124,
+    "Strength": 99.65,
+    "Energy": 77.07,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "HARUTO",
+    "Value": 9158,
+    "Strength": 54.88,
+    "Energy": 18.7,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "HAYATO",
+    "Value": 8400,
+    "Strength": 82.99,
+    "Energy": 29.93,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "HIBIKI",
+    "Value": 9210,
+    "Strength": 5.97,
+    "Energy": 78.8,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "HIDEKI",
+    "Value": 5875,
+    "Strength": 10,
+    "Energy": 59.98,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "HINA",
+    "Value": 7508,
+    "Strength": 3.29,
+    "Energy": 5.68,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "HIROKI",
+    "Value": 7246,
+    "Strength": 44.03,
+    "Energy": 82.07,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "HIROKO",
+    "Value": 4046,
+    "Strength": 27.33,
+    "Energy": 15.36,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "HIROSHI",
+    "Value": 2582,
+    "Strength": 51.85,
+    "Energy": 11.79,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "HIROTO",
+    "Value": 3768,
+    "Strength": 20.42,
+    "Energy": 25.13,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "HIROYUKI",
+    "Value": 2720,
+    "Strength": 42.9,
+    "Energy": 28.68,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "HITOSHI",
+    "Value": 6501,
+    "Strength": 66.32,
+    "Energy": 12.3,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "HONOKA",
+    "Value": 4696,
+    "Strength": 96.19,
+    "Energy": 65.19,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "HOSHI",
+    "Value": 9071,
+    "Strength": 15.94,
+    "Energy": 12.22,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "HOSHIKO",
+    "Value": 3942,
+    "Strength": 19.44,
+    "Energy": 93.54,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "HOTAKA",
+    "Value": 7092,
+    "Strength": 24.39,
+    "Energy": 92.38,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "HOTARU",
+    "Value": 4352,
+    "Strength": 48,
+    "Energy": 63.47,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "ICHIRO",
+    "Value": 7685,
+    "Strength": 16.01,
+    "Energy": 55.79,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "ISAMU",
+    "Value": 1751,
+    "Strength": 9.58,
+    "Energy": 21.57,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "ISAO",
+    "Value": 1725,
+    "Strength": 75.56,
+    "Energy": 15.42,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "ITSUKI",
+    "Value": 4035,
+    "Strength": 65.71,
+    "Energy": 72.32,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "IZUMI",
+    "Value": 4306,
+    "Strength": 11.77,
+    "Energy": 87.5,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "JIRO",
+    "Value": 2920,
+    "Strength": 9.79,
+    "Energy": 91.95,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "JUNICHI",
+    "Value": 3559,
+    "Strength": 48.94,
+    "Energy": 58.85,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "JUNKO",
+    "Value": 1306,
+    "Strength": 72.79,
+    "Energy": 54,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "JURO",
+    "Value": 7434,
+    "Strength": 89.69,
+    "Energy": 15.8,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "KAITO",
+    "Value": 2109,
+    "Strength": 30.38,
+    "Energy": 44.98,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "KAMIKO",
+    "Value": 4960,
+    "Strength": 82.5,
+    "Energy": 76.42,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "KANAKO",
+    "Value": 6484,
+    "Strength": 33.6,
+    "Energy": 38.66,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "KANON",
+    "Value": 7024,
+    "Strength": 92.01,
+    "Energy": 69.3,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "KAORI",
+    "Value": 9085,
+    "Strength": 73.11,
+    "Energy": 34.42,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "KASUMI",
+    "Value": 5641,
+    "Strength": 96.63,
+    "Energy": 2.96,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "KATASHI",
+    "Value": 5423,
+    "Strength": 80.49,
+    "Energy": 39.35,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "KATSUMI",
+    "Value": 8295,
+    "Strength": 26.17,
+    "Energy": 59.45,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "KATSUO",
+    "Value": 1516,
+    "Strength": 36.71,
+    "Energy": 13.03,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "KATSURO",
+    "Value": 2931,
+    "Strength": 37.48,
+    "Energy": 52.93,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "KAZUO",
+    "Value": 1573,
+    "Strength": 49.08,
+    "Energy": 91.89,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "KEIKO",
+    "Value": 5540,
+    "Strength": 62.57,
+    "Energy": 18.11,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "KIMI",
+    "Value": 4562,
+    "Strength": 97.55,
+    "Energy": 69.92,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "KIMIKO",
+    "Value": 4513,
+    "Strength": 48.87,
+    "Energy": 27.47,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "KIYOKO",
+    "Value": 8308,
+    "Strength": 57.9,
+    "Energy": 82.68,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "KIYOMI",
+    "Value": 6282,
+    "Strength": 66.88,
+    "Energy": 91.02,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "KIYOSHI",
+    "Value": 1013,
+    "Strength": 2.23,
+    "Energy": 41.38,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "KOKORO",
+    "Value": 3004,
+    "Strength": 82.95,
+    "Energy": 1.93,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "KOTONE",
+    "Value": 5353,
+    "Strength": 6.13,
+    "Energy": 53.8,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "KOUKI",
+    "Value": 3956,
+    "Strength": 54.32,
+    "Energy": 39.72,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "KOUTA",
+    "Value": 9096,
+    "Strength": 65.83,
+    "Energy": 44.48,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "KUMIKO",
+    "Value": 8705,
+    "Strength": 38.42,
+    "Energy": 13.06,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "KUNIO",
+    "Value": 1640,
+    "Strength": 82.61,
+    "Energy": 28.65,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "KURO",
+    "Value": 9848,
+    "Strength": 78.76,
+    "Energy": 48.06,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "KYOKO",
+    "Value": 9431,
+    "Strength": 50.61,
+    "Energy": 35.53,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "MAI",
+    "Value": 4676,
+    "Strength": 31.87,
+    "Energy": 23.25,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "MAIKO",
+    "Value": 4153,
+    "Strength": 38,
+    "Energy": 72.49,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MAMORU",
+    "Value": 2350,
+    "Strength": 82.02,
+    "Energy": 78.75,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "MANABU",
+    "Value": 5250,
+    "Strength": 85.46,
+    "Energy": 12.05,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MANAMI",
+    "Value": 6713,
+    "Strength": 42.97,
+    "Energy": 71.5,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "MARIKO",
+    "Value": 2657,
+    "Strength": 23.6,
+    "Energy": 54.66,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MASAAKI",
+    "Value": 2683,
+    "Strength": 48.32,
+    "Energy": 4.48,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MASAHIKO",
+    "Value": 7823,
+    "Strength": 65.89,
+    "Energy": 23.9,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "MASAHIRO",
+    "Value": 6617,
+    "Strength": 34.24,
+    "Energy": 86.79,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MASAMI",
+    "Value": 8168,
+    "Strength": 89.61,
+    "Energy": 65.85,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "MASANORI",
+    "Value": 4846,
+    "Strength": 19.33,
+    "Energy": 96.48,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MASAO",
+    "Value": 5701,
+    "Strength": 13.02,
+    "Energy": 28.12,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MASARU",
+    "Value": 3808,
+    "Strength": 99.96,
+    "Energy": 93.79,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "MASASHI",
+    "Value": 9270,
+    "Strength": 61.11,
+    "Energy": 78.43,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "MASATO",
+    "Value": 3996,
+    "Strength": 81.63,
+    "Energy": 44.62,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "MASAYOSHI",
+    "Value": 4325,
+    "Strength": 69.1,
+    "Energy": 95.66,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "MASAYUKI",
+    "Value": 2200,
+    "Strength": 30.8,
+    "Energy": 32.8,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MASUYO",
+    "Value": 8536,
+    "Strength": 25.67,
+    "Energy": 29.2,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "MAYUMI",
+    "Value": 7887,
+    "Strength": 95.39,
+    "Energy": 26.03,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MEGUMI",
+    "Value": 5713,
+    "Strength": 76.45,
+    "Energy": 42.37,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "MICHIKO",
+    "Value": 6844,
+    "Strength": 99.95,
+    "Energy": 68.42,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MICHIO",
+    "Value": 4169,
+    "Strength": 30.35,
+    "Energy": 53.62,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MIDORI",
+    "Value": 5727,
+    "Strength": 0.53,
+    "Energy": 82.69,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "MIEKO",
+    "Value": 8848,
+    "Strength": 42.78,
+    "Energy": 42.57,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MIKA",
+    "Value": 8523,
+    "Strength": 72.63,
+    "Energy": 34.95,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "MINAKO",
+    "Value": 8683,
+    "Strength": 78.66,
+    "Energy": 55.75,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "MINORU",
+    "Value": 7943,
+    "Strength": 94.96,
+    "Energy": 46.18,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "MISAKI",
+    "Value": 7227,
+    "Strength": 60.76,
+    "Energy": 90.34,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MITSUKO",
+    "Value": 9324,
+    "Strength": 58.09,
+    "Energy": 55.94,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MITSUO",
+    "Value": 7790,
+    "Strength": 43.25,
+    "Energy": 23.37,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "MIYAKO",
+    "Value": 6658,
+    "Strength": 36.07,
+    "Energy": 1.11,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "MIYOKO",
+    "Value": 3999,
+    "Strength": 57.77,
+    "Energy": 54.15,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MIYUKI",
+    "Value": 1943,
+    "Strength": 24.43,
+    "Energy": 79.12,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MOMOKA",
+    "Value": 8009,
+    "Strength": 65.91,
+    "Energy": 8.59,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MOMOKO",
+    "Value": 8250,
+    "Strength": 17.27,
+    "Energy": 88.85,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "MORIKO",
+    "Value": 7657,
+    "Strength": 25.49,
+    "Energy": 78.22,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "NANA",
+    "Value": 9666,
+    "Strength": 55.78,
+    "Energy": 0.9,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "NANAMI",
+    "Value": 9933,
+    "Strength": 1.48,
+    "Energy": 86.51,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "NAOKI",
+    "Value": 5479,
+    "Strength": 25.53,
+    "Energy": 35,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "NAOKO",
+    "Value": 6282,
+    "Strength": 74.94,
+    "Energy": 58.19,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "NAOMI",
+    "Value": 8101,
+    "Strength": 54.79,
+    "Energy": 70.4,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "NATSUKI",
+    "Value": 9326,
+    "Strength": 74.54,
+    "Energy": 29.29,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "NATSUKO",
+    "Value": 1983,
+    "Strength": 61.06,
+    "Energy": 44.38,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "NATSUMI",
+    "Value": 1908,
+    "Strength": 32.58,
+    "Energy": 59.84,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "NOBORU",
+    "Value": 8595,
+    "Strength": 79.22,
+    "Energy": 0.38,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "NOBU",
+    "Value": 4979,
+    "Strength": 42.89,
+    "Energy": 19.82,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "NOBUKO",
+    "Value": 5234,
+    "Strength": 43.02,
+    "Energy": 80.83,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "NOBUO",
+    "Value": 9795,
+    "Strength": 31.76,
+    "Energy": 55.21,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "NOBURU",
+    "Value": 3515,
+    "Strength": 51.4,
+    "Energy": 8.6,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "NOBUYUKI",
+    "Value": 3121,
+    "Strength": 6.8,
+    "Energy": 84.48,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "NORI",
+    "Value": 5508,
+    "Strength": 81.13,
+    "Energy": 82.52,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "NORIKO",
+    "Value": 9359,
+    "Strength": 63.4,
+    "Energy": 78.94,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "NORIO",
+    "Value": 6290,
+    "Strength": 1.12,
+    "Energy": 63.7,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "OSAMU",
+    "Value": 1234,
+    "Strength": 73.5,
+    "Energy": 72.42,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "REIKO",
+    "Value": 8207,
+    "Strength": 12.67,
+    "Energy": 68.27,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "RIKUTO",
+    "Value": 4812,
+    "Strength": 37.69,
+    "Energy": 25.6,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "ROKURO",
+    "Value": 8918,
+    "Strength": 76.45,
+    "Energy": 90.26,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "RYOICHI",
+    "Value": 6150,
+    "Strength": 61.17,
+    "Energy": 92.56,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "RYOKO",
+    "Value": 2039,
+    "Strength": 96,
+    "Energy": 9.57,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "RYOTA",
+    "Value": 8242,
+    "Strength": 72.33,
+    "Energy": 7.63,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "RYUU",
+    "Value": 3939,
+    "Strength": 71.38,
+    "Energy": 1.33,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "SABURO",
+    "Value": 7698,
+    "Strength": 44.89,
+    "Energy": 93.43,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "SACHIKO",
+    "Value": 2241,
+    "Strength": 46.25,
+    "Energy": 40.71,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "SADAO",
+    "Value": 4883,
+    "Strength": 62.31,
+    "Energy": 11.14,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "SAKI",
+    "Value": 5706,
+    "Strength": 31.52,
+    "Energy": 21.27,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "SAKURA",
+    "Value": 9491,
+    "Strength": 75.8,
+    "Energy": 18.64,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "SAKURAKO",
+    "Value": 2539,
+    "Strength": 51.26,
+    "Energy": 11.36,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "SATOKO",
+    "Value": 5371,
+    "Strength": 31.54,
+    "Energy": 36.88,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "SATOMI",
+    "Value": 9424,
+    "Strength": 12.69,
+    "Energy": 7,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "SATORU",
+    "Value": 7019,
+    "Strength": 75.72,
+    "Energy": 27.93,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "SATOSHI",
+    "Value": 1653,
+    "Strength": 37.13,
+    "Energy": 72.93,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "SAYURI",
+    "Value": 7524,
+    "Strength": 20.28,
+    "Energy": 64.86,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "SEIICHI",
+    "Value": 6344,
+    "Strength": 58.11,
+    "Energy": 69.1,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "SEIJI",
+    "Value": 2637,
+    "Strength": 66.74,
+    "Energy": 43.91,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "SETSUKO",
+    "Value": 8433,
+    "Strength": 76.56,
+    "Energy": 66.33,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "SHICHIRO",
+    "Value": 4938,
+    "Strength": 62.49,
+    "Energy": 22.77,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "SHIGEKO",
+    "Value": 6616,
+    "Strength": 14.48,
+    "Energy": 98.28,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "SHIGEO",
+    "Value": 3666,
+    "Strength": 41.4,
+    "Energy": 56.1,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "SHINICHI",
+    "Value": 4733,
+    "Strength": 79.23,
+    "Energy": 86.21,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "SHIORI",
+    "Value": 9132,
+    "Strength": 99.22,
+    "Energy": 73.38,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "SHIRO",
+    "Value": 5787,
+    "Strength": 64.59,
+    "Energy": 44.46,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "SHIZUKA",
+    "Value": 9241,
+    "Strength": 92.92,
+    "Energy": 99.4,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "SHIZUKO",
+    "Value": 8490,
+    "Strength": 52.49,
+    "Energy": 44.26,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "SHO",
+    "Value": 2077,
+    "Strength": 3.54,
+    "Energy": 56.73,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "SHOICHI",
+    "Value": 9476,
+    "Strength": 78.56,
+    "Energy": 87.67,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "SHOJI",
+    "Value": 6696,
+    "Strength": 16.36,
+    "Energy": 58.53,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "SHOUTA",
+    "Value": 5890,
+    "Strength": 68.39,
+    "Energy": 23.81,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "SHUICHI",
+    "Value": 8394,
+    "Strength": 32.45,
+    "Energy": 52.14,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "SHUJI",
+    "Value": 2845,
+    "Strength": 38.65,
+    "Energy": 34.03,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "SHUN",
+    "Value": 6929,
+    "Strength": 61.99,
+    "Energy": 42.15,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "SOUTA",
+    "Value": 6636,
+    "Strength": 22.39,
+    "Energy": 60.56,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "SUMIKO",
+    "Value": 5785,
+    "Strength": 74.25,
+    "Energy": 14.69,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "SUZUME",
+    "Value": 4626,
+    "Strength": 92.27,
+    "Energy": 90.41,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TADASHI",
+    "Value": 7877,
+    "Strength": 47.63,
+    "Energy": 29.08,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TAICHI",
+    "Value": 9669,
+    "Strength": 83.58,
+    "Energy": 26.68,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TAIKI",
+    "Value": 9333,
+    "Strength": 80.55,
+    "Energy": 30.25,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TAKAHIRO",
+    "Value": 7367,
+    "Strength": 73.95,
+    "Energy": 22.76,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TAKAKO",
+    "Value": 2208,
+    "Strength": 49.38,
+    "Energy": 73.79,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TAKAO",
+    "Value": 4703,
+    "Strength": 0.47,
+    "Energy": 26.48,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TAKARA",
+    "Value": 6790,
+    "Strength": 31.64,
+    "Energy": 85.73,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "TAKASHI",
+    "Value": 8227,
+    "Strength": 12.28,
+    "Energy": 33.04,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TAKAYUKI",
+    "Value": 5357,
+    "Strength": 99.56,
+    "Energy": 1.44,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TAKEHIKO",
+    "Value": 4314,
+    "Strength": 47.28,
+    "Energy": 32.88,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TAKEO",
+    "Value": 4570,
+    "Strength": 48.31,
+    "Energy": 8.71,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TAKESHI",
+    "Value": 6994,
+    "Strength": 49.17,
+    "Energy": 76.13,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TAKUMA",
+    "Value": 2746,
+    "Strength": 29.95,
+    "Energy": 77.79,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TAKUMI",
+    "Value": 8509,
+    "Strength": 72.51,
+    "Energy": 52.82,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TAMIKO",
+    "Value": 3610,
+    "Strength": 54.38,
+    "Energy": 86.01,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TAMOTSU",
+    "Value": 5413,
+    "Strength": 65.16,
+    "Energy": 20.86,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "TARO",
+    "Value": 3242,
+    "Strength": 88.35,
+    "Energy": 54.35,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TATSUO",
+    "Value": 2741,
+    "Strength": 47.26,
+    "Energy": 83.05,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TATSUYA",
+    "Value": 1199,
+    "Strength": 85.24,
+    "Energy": 84.8,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TETSUYA",
+    "Value": 2483,
+    "Strength": 4.91,
+    "Energy": 16.29,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TOMIKO",
+    "Value": 1231,
+    "Strength": 23.05,
+    "Energy": 56.05,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TOMIO",
+    "Value": 2277,
+    "Strength": 4.49,
+    "Energy": 70.24,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TOMOHIRO",
+    "Value": 1959,
+    "Strength": 17.96,
+    "Energy": 99.15,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TOMOKO",
+    "Value": 6928,
+    "Strength": 13.05,
+    "Energy": 56.1,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "TOMOMI",
+    "Value": 7167,
+    "Strength": 61.07,
+    "Energy": 73.68,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TORU",
+    "Value": 9353,
+    "Strength": 6.16,
+    "Energy": 5.91,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TOSHI",
+    "Value": 8774,
+    "Strength": 2.03,
+    "Energy": 37.13,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "TOSHIAKI",
+    "Value": 4095,
+    "Strength": 86.03,
+    "Energy": 38.71,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TOSHIKO",
+    "Value": 5988,
+    "Strength": 9.91,
+    "Energy": 55.54,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "TOSHIO",
+    "Value": 4558,
+    "Strength": 47.97,
+    "Energy": 21.65,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TOSHIYUKI",
+    "Value": 7722,
+    "Strength": 74.41,
+    "Energy": 63.06,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "TSUBAKI",
+    "Value": 3865,
+    "Strength": 14.66,
+    "Energy": 2.98,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TSUBAME",
+    "Value": 4227,
+    "Strength": 87.58,
+    "Energy": 80.25,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TSUKIKO",
+    "Value": 7054,
+    "Strength": 55.72,
+    "Energy": 42.1,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "TSUNEO",
+    "Value": 1231,
+    "Strength": 36.72,
+    "Energy": 29.92,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TSUTOMU",
+    "Value": 5435,
+    "Strength": 16.13,
+    "Energy": 51.41,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "TSUYOSHI",
+    "Value": 1757,
+    "Strength": 43.61,
+    "Energy": 81.64,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "UME",
+    "Value": 7022,
+    "Strength": 2.36,
+    "Energy": 9.72,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "UMEKO",
+    "Value": 3662,
+    "Strength": 32.05,
+    "Energy": 10.94,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "USAGI",
+    "Value": 6114,
+    "Strength": 4.3,
+    "Energy": 76.26,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "WAKANA",
+    "Value": 1335,
+    "Strength": 58.88,
+    "Energy": 33.09,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "YAMATO",
+    "Value": 7233,
+    "Strength": 3.65,
+    "Energy": 34.24,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "YASUKO",
+    "Value": 3108,
+    "Strength": 91.58,
+    "Energy": 88.29,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "YOKO",
+    "Value": 3082,
+    "Strength": 82.99,
+    "Energy": 9.39,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "YORI",
+    "Value": 5741,
+    "Strength": 0.7,
+    "Energy": 25.12,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "YOSHIKAZU",
+    "Value": 5718,
+    "Strength": 3.16,
+    "Energy": 86.59,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "YOSHIKO",
+    "Value": 7495,
+    "Strength": 5.95,
+    "Energy": 33.86,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "YOSHINORI",
+    "Value": 7984,
+    "Strength": 93.66,
+    "Energy": 10.13,
+    "Jokenpo": "Paper"
+  },
+  {
+    "Character": "YOSHIO",
+    "Value": 7460,
+    "Strength": 33.05,
+    "Energy": 15.69,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "YOSHIYUKI",
+    "Value": 7695,
+    "Strength": 39.68,
+    "Energy": 86.76,
+    "Jokenpo": "Scissors"
+  },
+  {
+    "Character": "YUKIO",
+    "Value": 9467,
+    "Strength": 46.16,
+    "Energy": 26.2,
+    "Jokenpo": "Rock"
+  },
+  {
+    "Character": "YUTAKA",
+    "Value": 7691,
+    "Strength": 78.62,
+    "Energy": 66.27,
+    "Jokenpo": "Scissors"
+  }
+]
