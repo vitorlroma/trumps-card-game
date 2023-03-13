@@ -1,5 +1,40 @@
-from Cards import Card as ca
+from players import Player as pl
 import random as rd
+
+
+def give_hands(p1, p2):
+    for i in range(10):
+
+
+def play(deck, p1, p2, mode):
+    index = 0
+    score = [0, 0]
+    deck.shuffle_cards()
+    give_hands(p1, p2)
+    ca.give_hands(deck, p1_cards, p2_cards)
+    while index in range(10):
+        dispute = gm.choose_dispute(index)
+        ca.rearrange_cards(p1_cards, mode, dispute)
+        ca.rearrange_cards(p2_cards, mode, dispute)
+        print(f'\tScore:\n{p1.nickname}: {score[0]} x {p2.nickname}: {score[1]}')
+        print('Player 1 chooses his card: ')
+        gm.show_player_cards(p1_cards)
+        card1 = gm.choose_card(p1_cards, mode)
+        print('Player 2 chooses his card:')
+        gm.show_player_cards(p2_cards)
+        card2 = gm.choose_card(p2_cards, mode)
+        round_winner = gm.duel(dispute, card1, card2)
+        gm.update_score(score, round_winner)
+        ca.aftermath(deck, p1_cards, p2_cards, round_winner)
+        if not p1_cards:
+            winner(p1, p2, 1)
+            return
+        elif not p2_cards:
+            winner(p1, p2, 2)
+            return
+
+    winner(gm.tie_breaker(p1_cards, p2_cards, 1))
+
 
 def choose_dispute(cond):
     if cond % 2 == 0:

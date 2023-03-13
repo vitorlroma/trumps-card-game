@@ -1,44 +1,37 @@
+import json
 import random as rd
 import operator
 
 
 class Card:
-    def __init__(self):
-        self.character = ''
-        self.value = 0
-        self.strength = 0.0
-        self.energy = 0.0
-        self.jokenpo = ''
-    
+    def __init__(self, character, value, strength, energy, jokenpo):
+        self.character = character
+        self.value = value
+        self.strength = strength
+        self.energy = energy
+        self.jokenpo = jokenpo
+
     @str
     def show_card(card):
         print(f'Character: {card.character};\nValue: {card.value};'
-            f'\nStrength: {card.strength};\nJokenpo: {card.jokenpo}')
+              f'\nStrength: {card.strength};\nJokenpo: {card.jokenpo}')
 
-    @staticmethod
-    def setting_deck(cards, deck):
-        for i in range(len(cards)):
-            line = cards[i].split(sep=';')
-            c = Card()
-            c.character= line[0]
-            c.value = line[1]
-            c.strenght = line[2]
-            c.energy = line[3]
-            c.jokenpo = line[4]
-            deck.append(c)
 
-    @staticmethod
-    def shuffle_cards(deck):
-        return rd.shuffle(deck)
+class Deck:
+    def __init__(self):
+        self.__deck = []
 
-    @staticmethod
-    def give_hands(deck, player1, player2):
-        for i in range(10):
-            aux = deck.pop()
-            if i % 2 == 0:
-                player1.cartas.append(aux)
-            elif i % 2 == 1:
-                player2.cartas.append(aux)
+    def get_deck(self):
+        return self.__deck.copy()
+
+    def add_card(self, card):
+        self.deck.append(card)
+
+    def shuffle_cards(self):
+        rd.shuffle(self.deck)
+
+    def give_card(self):
+        return self.deck.pop()
 
     @staticmethod
     def rearrange_cards(player_hand, mode, key):
@@ -53,10 +46,6 @@ class Card:
         elif key == 4:
             Card.shuffle_cards(player_hand)
 
-    @staticmethod
-    def give_card(deck, player_hand):
-        aux = deck.pop()
-        player_hand.append(aux)
 
     @staticmethod
     def aftermath(deck, p1c, p2c, winner):
@@ -69,15 +58,3 @@ class Card:
         elif winner == 0:
             Card.give_card(deck, p1c)
             Card.give_card(deck, p2c)
-    
-    @staticmethod
-    def read_cards(deck):
-        file = 'Cards.txt'
-        try:
-            with open(file, 'r') as c:
-                aux_list = c.read()[1:].splitlines()
-            
-            Card.setting_deck(aux_list, deck)
-        except IOError:
-            print('File could not be read.')
-        
