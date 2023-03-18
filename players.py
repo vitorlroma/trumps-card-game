@@ -1,27 +1,5 @@
 import pickle as pk
-
-
-class Player:
-    def __init__(self, nickname):
-        self.__nickname = nickname
-        self.__matches_played = 0
-        self.__matches_won = 0
-        self.__succes_rate = 0.0
-        self.__cards = []
-
-    def get_cards(self):
-        return self.__cards
-
-    def update_player(self, won):
-        self.matches_played += 1
-        if won:
-            self.matches_won += 1
-            self.succes_rate = self.matches_won / self.matches_played
-
-    @str
-    def show_player(p):
-        print(f'Nick: {p.nickname};\nMatches played: {p.matches_played};'
-              f'\nMatches won: {p.matches_won};\nSucces rate: {p.succes_rate}')
+from player import Player
 
 
 class Players:
@@ -29,7 +7,8 @@ class Players:
         self.players = []
 
     def add_player(self, nick):
-        p = Player(nick)
+        lista = []
+        p = Player(nick, lista)
         self.players.append(p)
         print(f'Player {p.nickname} registered.\n')
         return p

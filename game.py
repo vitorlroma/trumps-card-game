@@ -1,61 +1,72 @@
-from players import Player as pl
-import random as rd
+from cards import Deck
 
 
-def give_hands(p1, p2):
-    for i in range(10):
+class Game:
+    def __init__(self, player1, player2, cards, game_type):
+        self._player1 = player1
+        self._player2 = player2
+        self._cards = Deck(cards.get_deck())
+        self._game_type = game_type
+        self._score = [0, 0]
 
+    def give_hands(self):
+        for i in range(5):
+            self._player1.cards.add_card(self._cards.give_card())
+            self._player2.cards.add_card(self._cards.give_card())
 
-def play(deck, p1, p2, mode):
-    index = 0
-    score = [0, 0]
-    deck.shuffle_cards()
-    give_hands(p1, p2)
-    ca.give_hands(deck, p1_cards, p2_cards)
-    while index in range(10):
-        dispute = gm.choose_dispute(index)
-        ca.rearrange_cards(p1_cards, mode, dispute)
-        ca.rearrange_cards(p2_cards, mode, dispute)
-        print(f'\tScore:\n{p1.nickname}: {score[0]} x {p2.nickname}: {score[1]}')
-        print('Player 1 chooses his card: ')
-        gm.show_player_cards(p1_cards)
-        card1 = gm.choose_card(p1_cards, mode)
-        print('Player 2 chooses his card:')
-        gm.show_player_cards(p2_cards)
-        card2 = gm.choose_card(p2_cards, mode)
-        round_winner = gm.duel(dispute, card1, card2)
-        gm.update_score(score, round_winner)
-        ca.aftermath(deck, p1_cards, p2_cards, round_winner)
-        if not p1_cards:
-            winner(p1, p2, 1)
-            return
-        elif not p2_cards:
-            winner(p1, p2, 2)
-            return
+    def choose_dispute(self, cond):
+        if cond % 2 == 0:
+            dispute = int(input('Player 1 chooses dispute.\nType the number:'
+                                '\n\t[1]Value;\n\t[2]Strength;\n\t[3]Energia;\n\t[4]Jokenpo.'))
+        else:
+            dispute = int(input('Player 2 chooses dispute.\nType the number:'
+                                '\n\t[1]Value;\n\t[2]Strength;\n\t[3]Energy;\n\t[4]Jokenpo.'))
 
-    winner(gm.tie_breaker(p1_cards, p2_cards, 1))
+        self._player1.cards.rearrange_cards(self._game_type, dispute)
+        self._player2.cards.rearrange_cards(self._game_type, dispute)
 
+        return dispute
 
-def choose_dispute(cond):
-    if cond % 2 == 0:
-        key = int(input('Player 1 chooses dispute.\nType the number:'
-                        '\n\t[1]Value;\n\t[2]Strength;\n\t[3]Energia;\n\t[4]Jokenpo.'))
-    elif cond % 2 == 1:
-        key = int(input('Player 2 chooses dispute.\nType the number:'
-                        '\n\t[1]Value;\n\t[2]Strength;\n\t[3]Energy;\n\t[4]Jokenpo.'))
-    return key
+    def update_score(self, round_winner):
+        if round_winner == 1:
+            self._score[0] += 1
+        elif round_winner == 2:
+            self._score[1] += 1
 
-def show_player_hand(p_cards):
-    for card in p_cards:
-        ca.show_card(card)
+    def aftermath(self, winner):
+        if winner == 1:
+            self._player2.cards.add_card(self._cards.give_card)
+        elif winner == 2:
+            self._player1.cards.add_card(self._cards.give_card)
+        elif winner == 0:
+            self._player1.cards.add_card(self._cards.give_card)
+            self._player2.cards.add_card(self._cards.give_card)
 
-def choose_card(player_hand, mode):
-    if mode == 1:
-        num = int(input('Type the number of the card you choose: '))
-        return player_hand[(num - 1)]
-    elif mode == 2:
-        num = rd.randint(1, len(player_hand))
-        return player_hand[(num - 1)]
+    def verify_end_game(self):
+        if not self._player1.cards():
+            self._player1.update_player(True)
+        elif not self._player2.cards():
+            self._player2.update_player(True)
+
+    def match(self):
+        self._cards.shuffle_cards()
+        self.give_hands()
+        for rounds in range(10):
+            print(f'\tScore:\n{self._player1.nickname}: {self._score[0]} x {self._player2.nickname}: {self._score[1]}')
+
+            dispute = self.choose_dispute(rounds)
+
+            print('Player 1 chooses his card: ')
+            self._player1.show_player_hand()
+            num = int(input("Pick the number of the card: "))
+            card1 = self._player1.cards.get_card(num - 1)
+            print('Player 2 chooses his card:')
+            self._player2.show_player_hand()
+            num = int(input("Pick the number of the card: "))
+            card2 = self._player1.cards.get_card(num - 1)
+
+            winner = duel(dispute, card1, card2)
+            self.aftermath(winner)
 
 
 def duel(dispute, card1, card2):
@@ -67,12 +78,6 @@ def duel(dispute, card1, card2):
         return comparison(card1.energy, card2.energy)
     elif dispute == 4:
         return jokenpo(card1.jokenpo, card2.jokenpo)
-    
-def update_score(score, round_winner):
-    if round_winner == 1:
-        score[0] += 1
-    elif round_winner == 2:
-        score[1] += 1
 
 
 def comparison(value1, value2):
@@ -85,13 +90,13 @@ def comparison(value1, value2):
 
 
 def jokenpo(value1, value2):
-    if  (value1 == 'Paper' and value2 == 'Scissors'
-        or value1 == 'Rock' and value2 == 'Paper'
-        or value1 == 'Scissors' and value2 == 'Rock'):
+    if (value1 == 'Paper' and value2 == 'Scissors'
+            or value1 == 'Rock' and value2 == 'Paper'
+            or value1 == 'Scissors' and value2 == 'Rock'):
         return 2
-    elif  (value1 == 'Rock' and value2 == 'Scissors'
-        or value1 == 'Scissors' and value2 == 'Paper'
-        or value1 == 'Paper' and value2 == 'Rock'):
+    elif (value1 == 'Rock' and value2 == 'Scissors'
+          or value1 == 'Scissors' and value2 == 'Paper'
+          or value1 == 'Paper' and value2 == 'Rock'):
         return 1
     elif value1 == value2:
         return 0
@@ -116,7 +121,7 @@ def sum_of_cards(player_cards, attribute):
         if attribute == 1:
             total += card.value
         elif attribute == 2:
-                total += card.strength
+            total += card.strength
         elif attribute == 3:
             total += card.energy
         elif attribute == 4:
