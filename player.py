@@ -32,5 +32,5 @@ class Player:
             self._success_rate = self._matches_won / self._matches_played
 
     def __str__(self):
-        return f'Nickname: {self.nickname};\nMatches played: {self.matches_played};' \
-               f'\nMatches won: {self.matches_won};\nSucces rate: {self.success_rate}'
+        return f'Nickname: {self._nickname};\nMatches played: {self._matches_played};' \
+               f'\nMatches won: {self._matches_won};\nSucces rate: {self._success_rate}'
