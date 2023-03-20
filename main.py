@@ -41,27 +41,12 @@ def menu(players_list, cards):
     return answer
 
 
-def read_cards(cards):
-    file = 'cards.json'
-    try:
-        with open(file) as f:
-            data = json.load(f)
-
-        for card in data['cards']:
-            new_card = Card(card['Character'], card['Value'], card['Strength'], card['Energy'], card['Jokenpo'])
-            cards.append(new_card)
-
-    except IOError:
-        print('File could not be read.')
-
-
 def main():
     answer = 0
     players_list = Players()
     players_list.read_players()
-    cards = []
-    read_cards(cards)
-    cards = Deck(cards)
+    cards = Deck([])
+    cards.read_cards()
 
     while answer != 3:
         answer = menu(players_list, cards)

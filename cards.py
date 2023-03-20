@@ -1,6 +1,7 @@
 import json
 import random as rd
 import operator
+from card import Card
 
 
 class Deck:
@@ -34,6 +35,19 @@ class Deck:
             self._deck.sort(key=(operator.attrgetter('energy')))
         elif key == 4:
             self._deck.shuffle_cards()
+
+    def read_cards(self):
+        file = 'cards.json'
+        try:
+            with open(file) as f:
+                data = json.load(f)
+
+            for card in data['cards']:
+                new_card = Card(card['Character'], card['Value'], card['Strength'], card['Energy'], card['Jokenpo'])
+                self._deck.append(new_card)
+
+        except IOError:
+            print('File could not be read.')
 
     def print_cards(self):
         for card in self._deck:
