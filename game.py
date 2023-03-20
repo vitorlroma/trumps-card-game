@@ -42,11 +42,14 @@ class Game:
             self._player1.cards.add_card(self._cards.give_card)
             self._player2.cards.add_card(self._cards.give_card)
 
-    def verify_end_game(self):
+    def verify_end_game(self, rounds):
         if not self._player1.cards():
             self._player1.update_player(True)
         elif not self._player2.cards():
             self._player2.update_player(True)
+
+        if rounds == 9:
+            tie_breaker(self._player1.cards, self._player2.cards, 1)
 
     def match(self):
         self._cards.shuffle_cards()
@@ -60,13 +63,18 @@ class Game:
             self._player1.show_player_hand()
             num = int(input("Pick the number of the card: "))
             card1 = self._player1.cards.get_card(num - 1)
+
             print('Player 2 chooses his card:')
             self._player2.show_player_hand()
             num = int(input("Pick the number of the card: "))
-            card2 = self._player1.cards.get_card(num - 1)
+            card2 = self._player2.cards.get_card(num - 1)
 
             winner = duel(dispute, card1, card2)
+            self.update_score(winner)
             self.aftermath(winner)
+
+            if rounds > 4:
+                self.verify_end_game(rounds)
 
 
 def duel(dispute, card1, card2):
