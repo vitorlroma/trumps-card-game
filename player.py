@@ -31,7 +31,6 @@ class Player:
             self._matches_won += 1
             self._success_rate = self._matches_won / self._matches_played
 
-    @str
-    def show_player(p):
-        print(f'Nick: {p.nickname};\nMatches played: {p.matches_played};'
-              f'\nMatches won: {p.matches_won};\nSucces rate: {p.success_rate}')
+    def __str__(self):
+        return f'Nickname: {self.nickname};\nMatches played: {self.matches_played};' \
+               f'\nMatches won: {self.matches_won};\nSucces rate: {self.success_rate}'
