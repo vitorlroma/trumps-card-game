@@ -1,6 +1,4 @@
-import json
 from players import Players
-from card import Card
 from cards import Deck
 from game import Game
 
@@ -20,7 +18,7 @@ def login(players_list):
 
 def menu(players_list, cards):
     try:
-        answer = int(input('Type:\n[1]Play;\n[2]Register player;\n[3]Exit.\n'))
+        answer = int(input('Type:\n[1]Play;\n[2]Register player;\n[3]Check profile;\n[4]Exit.\n'))
         if answer == 1:
             game_type = int(input('[1]Manual;\n[2]Random.\n'))
             player1 = login(players_list)
@@ -32,9 +30,10 @@ def menu(players_list, cards):
             nick = input('Register player.\nType nickname:')
             players_list.add_player(nick)
         elif answer == 3:
+            nick = input('\nType nickname:')
+            print(f'\n{players_list.search_player(nick)}\n')
+        elif answer == 4:
             pass
-        else:
-            print('Undefined answer.\n')
     except ValueError:
         print('Undefined answer.\n')
 
@@ -48,7 +47,7 @@ def main():
     cards = Deck([])
     cards.read_cards()
 
-    while answer != 3:
+    while answer != 4:
         answer = menu(players_list, cards)
 
     players_list.players_bin()
