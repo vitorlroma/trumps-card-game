@@ -20,7 +20,7 @@ class Players:
         return None
 
     def read_players(self):
-        file = 'players.dat'
+        file = 'Players.dat'
         try:
             with open(file, 'rb') as f:
                 self.players = pk.load(f)
