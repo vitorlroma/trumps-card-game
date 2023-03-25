@@ -27,5 +27,5 @@ class Card:
         return self._jokenpo
 
     def __str__(self):
-        return f'Character: {self._character};\nValue: {self._value};' \
-               f'\nStrength: {self._strength};\nEnergy: {self._energy};\nJokenpo: {self._jokenpo}\n'
+        return f'Character: {self.character};\nValue: {self.value};' \
+               f'\nStrength: {self.strength};\nEnergy: {self.energy};\nJokenpo: {self.jokenpo}\n'
