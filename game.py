@@ -5,7 +5,7 @@ class Game:
     def __init__(self, player1, player2, cards, game_type):
         self._player1 = player1
         self._player2 = player2
-        self._cards = Deck(cards.get_deck())
+        self._cards = Deck(cards.deck_copy())
         self._game_type = game_type
         self._score = [0, 0]
 
@@ -14,42 +14,41 @@ class Game:
             self._player1.cards.add_card(self._cards.give_card())
             self._player2.cards.add_card(self._cards.give_card())
 
-    def choose_dispute(self, cond):
-        if cond % 2 == 0:
-            dispute = int(input('Player 1 chooses dispute.\nType the number:'
-                                '\n\t[1]Value;\n\t[2]Strength;\n\t[3]Energia;\n\t[4]Jokenpo.'))
-        else:
-            dispute = int(input('Player 2 chooses dispute.\nType the number:'
-                                '\n\t[1]Value;\n\t[2]Strength;\n\t[3]Energy;\n\t[4]Jokenpo.'))
-
-        self._player1.cards.rearrange_cards(self._game_type, dispute)
-        self._player2.cards.rearrange_cards(self._game_type, dispute)
-
-        return dispute
-
     def update_score(self, round_winner):
         if round_winner == 1:
             self._score[0] += 1
         elif round_winner == 2:
             self._score[1] += 1
+        else:
+            print('\nDraw\n')
+
+    def round_aftermath(self, winner):
+        if winner == 1:
+            self._player2.cards.add_card(self._cards.give_card())
+        elif winner == 2:
+            self._player1.cards.add_card(self._cards.give_card())
+        else:
+            self._player1.cards.add_card(self._cards.give_card())
+            self._player2.cards.add_card(self._cards.give_card())
+
+    def verify_end_game(self):
+        if self._player1.cards.is_empty():
+            return 1
+        elif self._player2.cards.is_empty():
+            return 2
+        else:
+            return tie_breaker(self._player1.cards, self._player2.cards, 1)
 
     def aftermath(self, winner):
         if winner == 1:
-            self._player2.cards.add_card(self._cards.give_card)
-        elif winner == 2:
-            self._player1.cards.add_card(self._cards.give_card)
-        elif winner == 0:
-            self._player1.cards.add_card(self._cards.give_card)
-            self._player2.cards.add_card(self._cards.give_card)
-
-    def verify_end_game(self, rounds):
-        if not self._player1.cards():
             self._player1.update_player(True)
-        elif not self._player2.cards():
+            self._player2.update_player(False)
+        elif winner == 2:
             self._player2.update_player(True)
-
-        if rounds == 9:
-            tie_breaker(self._player1.cards, self._player2.cards, 1)
+            self._player1.update_player(False)
+        else:
+            self._player1.update_player(False)
+            self._player2.update_player(False)
 
     def match(self):
         self._cards.shuffle_cards()
@@ -57,24 +56,57 @@ class Game:
         for rounds in range(10):
             print(f'\tScore:\n{self._player1.nickname}: {self._score[0]} x {self._player2.nickname}: {self._score[1]}')
 
-            dispute = self.choose_dispute(rounds)
+            dispute = choose_dispute(rounds)
 
-            print('Player 1 chooses his card: ')
-            self._player1.show_player_hand()
-            num = int(input("Pick the number of the card: "))
-            card1 = self._player1.cards.get_card(num - 1)
+            card1, card2 = None, None
 
-            print('Player 2 chooses his card:')
-            self._player2.show_player_hand()
-            num = int(input("Pick the number of the card: "))
-            card2 = self._player2.cards.get_card(num - 1)
+            while card1 is None:
+                card1 = choose_card(self._player1, self._game_type)
+            while card2 is None:
+                card2 = choose_card(self._player2, self._game_type)
 
-            winner = duel(dispute, card1, card2)
-            self.update_score(winner)
-            self.aftermath(winner)
+            round_winner = duel(dispute, card1, card2)
+            self.update_score(round_winner)
+            self.round_aftermath(round_winner)
 
-            if rounds > 4:
-                self.verify_end_game(rounds)
+            if self._player1.cards.is_empty() or self._player1.cards.is_empty():
+                break
+
+        winner = self.verify_end_game()
+        self.aftermath(winner)
+
+        if winner == 1:
+            print(f'{self._player1.nickname} venceu!!!')
+        elif winner == 2:
+            print(f'{self._player2.nickname} venceu!!!')
+        else:
+            print(f'The game ended in a draw.')
+
+
+def choose_dispute(cond):
+    if cond % 2 == 0:
+        dispute = int(input('Player 1 chooses dispute.\nType the number:'
+                            '\n\t[1]Value;\n\t[2]Strength;\n\t[3]Energia;\n\t[4]Jokenpo.'))
+    else:
+        dispute = int(input('Player 2 chooses dispute.\nType the number:'
+                            '\n\t[1]Value;\n\t[2]Strength;\n\t[3]Energy;\n\t[4]Jokenpo.'))
+
+    return dispute
+
+
+def choose_card(player, game_type):
+    if game_type == 2:
+        return player.cards.rd_card()
+    try:
+        print(f'\n{player.nickname} chooses his card: ')
+        player.show_player_hand()
+        num = int(input("Pick the number of the card: "))
+        card = player.cards.get_card(num - 1)
+        print(f'\n{card.__str__()}\n')
+        return card
+    except IndexError:
+        print('Invalid input.')
+        return None
 
 
 def duel(dispute, card1, card2):
@@ -124,8 +156,9 @@ def tie_breaker(p1c, p2c, attribute):
 
 
 def sum_of_cards(player_cards, attribute):
+    cards = player_cards.deck
     total = 0
-    for card in player_cards:
+    for card in cards:
         if attribute == 1:
             total += card.value
         elif attribute == 2:
