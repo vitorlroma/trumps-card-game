@@ -25,12 +25,12 @@ class Player:
         self._cards.print_cards()
 
     def update_player(self, won):
-        self._cards = None
+        self._cards = Deck([])
         self._matches_played += 1
         if won:
             self._matches_won += 1
-            self._success_rate = self._matches_won / self._matches_played
+        self._success_rate = self._matches_won / self._matches_played
 
     def __str__(self):
-        return f'Nickname: {self._nickname};\nMatches played: {self._matches_played};' \
-               f'\nMatches won: {self._matches_won};\nSucces rate: {self._success_rate}'
+        return f'Nickname: {self.nickname};\nMatches played: {self.matches_played};' \
+               f'\nMatches won: {self.matches_won};\nSucces rate: {self.success_rate*100}%'
