@@ -50,6 +50,6 @@ class Deck:
         except IOError:
             print('File could not be read.')
 
-    def print_cards(self):
+    def __str__(self):
         for card in self._deck:
             print(card.__str__())
