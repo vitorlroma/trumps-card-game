@@ -17,7 +17,9 @@ class Players:
         for player in self.players:
             if nick == player.nickname:
                 return player
-        return 'Player not found.'
+
+        print('Player not found.')
+        return None
 
     def read_players(self):
         file = 'Players.dat'
