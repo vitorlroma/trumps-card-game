@@ -18,11 +18,23 @@ class Player:
         self._nickname = nick
 
     @property
+    def matches_played(self):
+        return self._matches_played
+
+    @property
+    def matches_won(self):
+        return self._matches_won
+
+    @property
+    def success_rate(self):
+        return self._success_rate
+
+    @property
     def cards(self):
         return self._cards
 
     def show_player_hand(self):
-        self._cards.print_cards()
+        self._cards.__str__()
 
     def update_player(self, won):
         self._cards = Deck([])
