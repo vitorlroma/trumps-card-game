@@ -65,6 +65,8 @@ class Game:
             while card2 is None:
                 card2 = choose_card(self._player2, self._game_type)
 
+            print(f'{card1}\nX\n{card2}')
+
             round_winner = duel(dispute, card1, card2)
             self.update_score(round_winner)
             self.round_aftermath(round_winner)
@@ -76,11 +78,11 @@ class Game:
         self.aftermath(winner)
 
         if winner == 1:
-            print(f'{self._player1.nickname} venceu!!!')
+            print(f'{self._player1.nickname} venceu\n!!!')
         elif winner == 2:
-            print(f'{self._player2.nickname} venceu!!!')
+            print(f'{self._player2.nickname} venceu\n!!!')
         else:
-            print(f'The game ended in a draw.')
+            print(f'The game ended in a draw.\n')
 
 
 def choose_dispute(cond):
@@ -104,7 +106,6 @@ def choose_card(player, game_type):
             num = int(input("Pick the number of the card: "))
             card = player.cards.get_card(num - 1)
 
-        print(f'\n{card.__str__()}\n')
         return card
     except IndexError:
         print('You don\'t have this many cards.')
