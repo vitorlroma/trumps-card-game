@@ -31,7 +31,7 @@ class Game:
             self._player1.cards.add_card(self._cards.give_card())
             self._player2.cards.add_card(self._cards.give_card())
 
-    def verify_end_game(self):
+    def verify_winner(self):
         if self._player1.cards.is_empty():
             return 1
         elif self._player2.cards.is_empty():
@@ -72,7 +72,7 @@ class Game:
             if self._player1.cards.is_empty() or self._player1.cards.is_empty():
                 break
 
-        winner = self.verify_end_game()
+        winner = self.verify_winner()
         self.aftermath(winner)
 
         if winner == 1:
@@ -95,17 +95,19 @@ def choose_dispute(cond):
 
 
 def choose_card(player, game_type):
-    if game_type == 2:
-        return player.cards.rd_card()
     try:
-        print(f'\n{player.nickname} chooses his card: ')
-        player.show_player_hand()
-        num = int(input("Pick the number of the card: "))
-        card = player.cards.get_card(num - 1)
+        if game_type == 2:
+            card = player.cards.rd_card()
+        else:
+            print(f'\n{player.nickname} chooses his card: ')
+            player.show_player_hand()
+            num = int(input("Pick the number of the card: "))
+            card = player.cards.get_card(num - 1)
+
         print(f'\n{card.__str__()}\n')
         return card
     except IndexError:
-        print('Invalid input.')
+        print('You don\'t have this many cards.')
         return None
 
 
