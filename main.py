@@ -13,26 +13,29 @@ def login(players_list):
     if player is not None:
         return player
 
-    answer = input('Player not found.\n Wish to register?"Y" or "N"')
-    if answer == "Y":
+    answer = input('\nWish to register?"Y" or "N"')
+    if answer == "Y" or answer == "y":
         return players_list.add_player(nick)
 
     return None
 
 
 def play(players, cards):
-    game_type = 0
-    try:
-        while game_type != 1 or game_type != 2:
+    cond = False
+    while not cond:
+        try:
             game_type = int(input('[1]Manual;\n[2]Random.\n'))
-        while player1 is None:
-            player1 = login(players)
-        while player2 is None:
-            player2 = login(players)
-        game = Game(player1, player2, cards, game_type)
-        game.match()
-    except ValueError:
-        error()
+            cond = bool(game_type == 1 or game_type == 2)
+        except ValueError:
+            error()
+
+    player1, player2 = None, None
+    while player1 is None:
+        player1 = login(players)
+    while player2 is None:
+        player2 = login(players)
+    game = Game(player1, player2, cards, game_type)
+    game.match()
 
 
 def menu(players_list, cards):
