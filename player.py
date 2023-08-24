@@ -2,46 +2,50 @@ from cards import Deck
 
 
 class Player:
-    def __init__(self, nickname, lista):
-        self._nickname = nickname
-        self._matches_played = 0
-        self._matches_won = 0
-        self._success_rate = 0.0
-        self._cards = Deck(lista)
+    def __new__(cls, *args, **kwargs):
+        player_obj = super(Player, cls).__new__(cls)
+        return player_obj
+
+    def __init__(self, nickname):
+        self.__nickname = nickname
+        self.__matches_played = 0
+        self.__matches_won = 0
+        self.__success_rate = 0.0
+        self.__cards = Deck()
 
     @property
     def nickname(self):
-        return self._nickname
+        return self.__nickname
 
     @nickname.setter
     def nickname(self, nick):
-        self._nickname = nick
+        self.__nickname = nick
 
     @property
     def matches_played(self):
-        return self._matches_played
+        return self.__matches_played
 
     @property
     def matches_won(self):
-        return self._matches_won
+        return self.__matches_won
 
     @property
     def success_rate(self):
-        return self._success_rate
+        return self.__success_rate
 
     @property
     def cards(self):
-        return self._cards
+        return self.__cards
 
     def show_player_hand(self):
-        self._cards.__str__()
+        self.__cards.__str__()
 
     def update_player(self, won):
-        self._cards = Deck([])
-        self._matches_played += 1
+        self.__cards = Deck([])
+        self.__matches_played += 1
         if won:
-            self._matches_won += 1
-        self._success_rate = self._matches_won / self._matches_played
+            self.__matches_won += 1
+        self.__success_rate = self.__matches_won / self.__matches_played
 
     def __str__(self):
         return f'Nickname: {self.nickname};\nMatches played: {self.matches_played};' \
