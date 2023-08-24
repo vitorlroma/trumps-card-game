@@ -1,69 +1,102 @@
+from player import Player as pl
 from cards import Deck
 
-
 class Game:
-    def __init__(self, player1, player2, cards, game_type):
-        self._player1 = player1
-        self._player2 = player2
-        self._cards = Deck(cards.deck_copy())
-        self._game_type = game_type
-        self._score = [0, 0]
+    def __init__(self):
+        self.__player1 = pl
+        self.__player2 = pl
+        self.__cards = Deck()
+        self.__game_type = -1
+        self.__score = [0, 0]
+
+    @property
+    def player1(self):
+        return self.__player1
+
+    @player1.setter
+    def player1(self, player):
+        self.__player1 = player
+
+    @property
+    def player2(self):
+        return self.__player2
+
+    @player2.setter
+    def player2(self, player):
+        self.__player2 = player
+
+    @property
+    def cards(self):
+        return self.__cards
+
+    @cards.setter
+    def cards(self, cards):
+        self.__cards = cards
+
+    @property
+    def game_type(self):
+        return self.__game_type
+
+    @game_type.setter
+    def game_type(self, game_type):
+        self.__game_type = game_type
 
     def give_hands(self):
-        for i in range(5):
-            self._player1.cards.add_card(self._cards.give_card())
-            self._player2.cards.add_card(self._cards.give_card())
+        for _ in range(5):
+            self.__player1.cards.add_card(self.__cards.give_card())
+            self.__player2.cards.add_card(self.__cards.give_card())
 
     def update_score(self, round_winner):
         if round_winner == 1:
-            self._score[0] += 1
+            self.__score[0] += 1
         elif round_winner == 2:
-            self._score[1] += 1
+            self.__score[1] += 1
         else:
             print('\nDraw\n')
 
     def round_aftermath(self, winner):
         if winner == 1:
-            self._player2.cards.add_card(self._cards.give_card())
+            self.__player2.cards.add_card(self.__cards.give_card())
         elif winner == 2:
-            self._player1.cards.add_card(self._cards.give_card())
+            self.__player1.cards.add_card(self.__cards.give_card())
         else:
-            self._player1.cards.add_card(self._cards.give_card())
-            self._player2.cards.add_card(self._cards.give_card())
+            self.__player1.cards.add_card(self.__cards.give_card())
+            self.__player2.cards.add_card(self.__cards.give_card())
 
     def verify_winner(self):
-        if self._player1.cards.is_empty():
+        if self.__player1.cards.is_empty():
             return 1
-        elif self._player2.cards.is_empty():
+        elif self.__player2.cards.is_empty():
             return 2
         else:
-            return tie_breaker(self._player1.cards, self._player2.cards, 1)
+            return tie_breaker(self.__player1.cards, self.__player2.cards, 1)
 
     def aftermath(self, winner):
         if winner == 1:
-            self._player1.update_player(True)
-            self._player2.update_player(False)
+            self.__player1.update_player(True)
+            self.__player2.update_player(False)
         elif winner == 2:
-            self._player2.update_player(True)
-            self._player1.update_player(False)
+            self.__player2.update_player(True)
+            self.__player1.update_player(False)
         else:
-            self._player1.update_player(False)
-            self._player2.update_player(False)
+            self.__player1.update_player(False)
+            self.__player2.update_player(False)
 
     def match(self):
-        self._cards.shuffle_cards()
+        self.__cards.shuffle_cards()
         self.give_hands()
         for rounds in range(10):
-            print(f'\tScore:\n{self._player1.nickname}: {self._score[0]} x {self._player2.nickname}: {self._score[1]}')
+            print(f'\tScore:\n{self.__player1.nickname}: {self.__score[0]} '
+                  f'x {self.__player2.nickname}: {self.__score[1]}')
 
             dispute = choose_dispute(rounds)
 
             card1, card2 = None, None
 
             while card1 is None:
-                card1 = choose_card(self._player1, self._game_type)
+                card1 = choose_card(self.__player1, self.__game_type)
             while card2 is None:
-                card2 = choose_card(self._player2, self._game_type)
+                card2 = choose_card(self.__player2, self.__game_type)
 
             print(f'{card1}\nX\n{card2}')
 
@@ -71,16 +104,16 @@ class Game:
             self.update_score(round_winner)
             self.round_aftermath(round_winner)
 
-            if self._player1.cards.is_empty() or self._player1.cards.is_empty():
+            if self.__player1.cards.is_empty() or self.__player1.cards.is_empty():
                 break
 
         winner = self.verify_winner()
         self.aftermath(winner)
 
         if winner == 1:
-            print(f'{self._player1.nickname} venceu\n!!!')
+            print(f'{self.__player1.nickname} venceu\n!!!')
         elif winner == 2:
-            print(f'{self._player2.nickname} venceu\n!!!')
+            print(f'{self.__player2.nickname} venceu\n!!!')
         else:
             print(f'The game ended in a draw.\n')
 
