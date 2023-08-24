@@ -1,30 +1,30 @@
 class Card:
     def __init__(self, character, value, strength, energy, jokenpo):
-        self._character = character
-        self._value = value
-        self._strength = strength
-        self._energy = energy
-        self._jokenpo = jokenpo
+        self.__character = character
+        self.__value = value
+        self.__strength = strength
+        self.__energy = energy
+        self.__jokenpo = jokenpo
 
     @property
     def character(self):
-        return self._character
+        return self.__character
 
     @property
     def value(self):
-        return self._value
+        return self.__value
 
     @property
     def strength(self):
-        return self._strength
+        return self.__strength
 
     @property
     def energy(self):
-        return self._energy
+        return self.__energy
 
     @property
     def jokenpo(self):
-        return self._jokenpo
+        return self.__jokenpo
 
     def __str__(self):
         return f'Character: {self.character};\nValue: {self.value};' \
