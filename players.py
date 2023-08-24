@@ -4,17 +4,16 @@ from player import Player
 
 class Players:
     def __init__(self):
-        self.players = []
+        self.__players = []
 
     def add_player(self, nick):
-        lista = []
-        p = Player(nick, lista)
-        self.players.append(p)
+        p = Player(nick)
+        self.__players.append(p)
         print(f'Player {p.nickname} registered.\n')
         return p
 
     def search_player(self, nick):
-        for player in self.players:
+        for player in self.__players:
             if nick == player.nickname:
                 return player
 
@@ -22,17 +21,17 @@ class Players:
         return None
 
     def read_players(self):
-        file = 'Players.dat'
+        arq = 'Players.dat'
         try:
-            with open(file, 'rb') as f:
-                self.players = pk.load(f)
+            with open(arq, 'rb') as f:
+                self.__players = pk.load(f)
         except IOError:
             print('File could not be read.')
 
     def players_bin(self):
-        file = 'Players.dat'
+        arq = 'Players.dat'
         try:
-            with open(file, 'wb') as f:
-                pk.dump(self.players, f)
+            with open(arq, 'wb') as f:
+                pk.dump(self.__players, f)
         except IOError:
             print('File could not be read.')
