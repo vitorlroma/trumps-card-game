@@ -2,10 +2,6 @@ from cards import Deck
 
 
 class Player:
-    def __new__(cls, *args, **kwargs):
-        player_obj = super(Player, cls).__new__(cls)
-        return player_obj
-
     def __init__(self, nickname):
         self.__nickname = nickname
         self.__matches_played = 0
@@ -41,12 +37,12 @@ class Player:
         self.__cards.__str__()
 
     def update_player(self, won):
-        self.__cards = Deck([])
+        self.__cards = Deck()
         self.__matches_played += 1
         if won:
             self.__matches_won += 1
         self.__success_rate = self.__matches_won / self.__matches_played
 
     def __str__(self):
-        return f'Nickname: {self.nickname};\nMatches played: {self.matches_played};' \
-               f'\nMatches won: {self.matches_won};\nSucces rate: {self.success_rate*100}%'
+        return f'Nickname: {self.__nickname};\nMatches played: {self.__matches_played};' \
+               f'\nMatches won: {self.__matches_won};\nSucces rate: {self.__success_rate*100}%'
