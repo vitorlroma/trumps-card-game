@@ -7,7 +7,8 @@ class Start:
     def __init__(self):
         self.__players_list = Players()
         self.__cards = Deck()
-        self.__game = Game()
+        self.__player_one = None
+        self.__player_two = None
 
     def __login(self, nick):
         player = self.__players_list.search_player(nick)
@@ -16,10 +17,10 @@ class Start:
             if answer == "Y" or answer == "y":
                 player = self.__players_list.add_player(nick)
 
-        if player is not None and self.__game.player1 is None:
-            self.__game.player1(player)
-        elif player is not None and self.__game.player2 is not None:
-            self.__game.player2(player)
+        if self.__player_one is None:
+            self.__player_one = player
+        elif self.__player_two is None:
+            self.__player_two = player
 
     def __play(self):
         cond = False
@@ -30,13 +31,12 @@ class Start:
             except ValueError:
                 print('Invalid input.')
 
-        nick = input('Type your nickname: ')
-        self.__login(nick)
-        nick = input('Type your nickname: ')
-        self.__login(nick)
+        while self.__player_one is None or self.__player_two is None:
+            nick = input('Type your nickname: ')
+            self.__login(nick)
 
-        self.__game.cards(self.__cards.deck_shuffled())
-        self.__game.match()
+        game = Game(self.__player_one, self.__player_two, self.__cards.deck(), game_type)
+        game.match()
 
     def read_data(self):
         self.__players_list.read_players()
@@ -54,6 +54,8 @@ class Start:
             elif answer == 3:
                 nick = input('\nType nickname:')
                 print(f'\n{self.__players_list.search_player(nick)}\n')
+            elif answer == 4:
+                self.__players_list.players_bin()
         except ValueError:
             print('Invalid input.')
 
@@ -67,8 +69,6 @@ def main():
 
     while answer != 4:
         answer = start.menu()
-
-    # players_list.players_bin()
 
 
 if __name__ == '__main__':
